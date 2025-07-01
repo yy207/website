@@ -1,0 +1,207 @@
+/* 博客英雄区域 */
+.blog-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    padding: 150px 0 80px;
+    text-align: center;
+}
+
+.blog-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 博客文章网格 */
+.blog-section {
+    padding: 5rem 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.blog-post {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.post-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-post:hover .post-image img {
+    transform: scale(1.05);
+}
+
+.post-date {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-align: center;
+    width: 60px;
+    padding: 8px;
+    border-radius: 4px;
+    line-height: 1.2;
+}
+
+.date-day {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+}
+
+.date-month {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.post-meta i {
+    margin-right: 0.3rem;
+}
+
+.post-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.post-content h2 a {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.post-content h2 a:hover {
+    color: var(--accent-color);
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.read-more i {
+    margin-left: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.read-more:hover {
+    color: var(--accent-dark);
+}
+
+/* 分页 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.page-number, .next-page {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.next-page {
+    width: auto;
+    padding: 0 15px;
+}
+
+.page-number:hover, .next-page:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.page-number.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .blog-hero {
+        padding: 130px 0 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-hero h1 {
+        font-size: 2rem;
+    }
+
+    .blog-hero p {
+        font-size: 1rem;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-image {
+        height: 180px;
+    }
+}

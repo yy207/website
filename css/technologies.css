@@ -1,0 +1,203 @@
+/* 技术栈英雄区域 */
+.tech-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    padding: 150px 0 80px;
+    text-align: center;
+}
+
+.tech-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease;
+}
+
+.tech-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease;
+}
+
+/* 技术分类区域 */
+.frontend-tech, .backend-tech,
+.database-tech, .devops-tech,
+.other-tech {
+    padding: 5rem 0;
+    position: relative;
+}
+
+.frontend-tech {
+    background-color: var(--white);
+}
+
+.backend-tech {
+    background-color: var(--light-bg);
+}
+
+.database-tech {
+    background-color: var(--white);
+}
+
+.devops-tech {
+    background-color: var(--light-bg);
+}
+
+.other-tech {
+    background-color: var(--white);
+}
+
+/* 技术分类网格 */
+.tech-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tech-category {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border-top: 4px solid var(--accent-color);
+}
+
+.tech-category:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tech-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.tech-category h3 i {
+    margin-right: 0.8rem;
+    font-size: 1.8rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(66, 153, 225, 0.1);
+    border-radius: 50%;
+    color: var(--secondary-color);
+}
+
+.tech-items {
+    list-style-type: none;
+}
+
+.tech-items li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--gray-light);
+    position: relative;
+    padding-left: 1.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.tech-items li:last-child {
+    border-bottom: none;
+}
+
+.tech-items li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.tech-items li:hover {
+    color: var(--primary-color);
+    padding-left: 2rem;
+}
+
+/* 技术栈动画效果 */
+@keyframes techPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: var(--shadow);
+    }
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: var(--shadow);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .tech-hero {
+        padding: 130px 0 60px;
+    }
+
+    .tech-category {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-categories {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .tech-hero h1 {
+        font-size: 2rem;
+    }
+
+    .tech-hero p {
+        font-size: 1rem;
+    }
+
+    .tech-category h3 {
+        font-size: 1.1rem;
+    }
+
+    .tech-items li {
+        font-size: 0.9rem;
+    }
+}
+
+/* 技术栈浮动动画 */
+.tech-category:nth-child(1) {
+    animation: float 6s ease-in-out infinite;
+}
+
+.tech-category:nth-child(2) {
+    animation: float 7s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.tech-category:nth-child(3) {
+    animation: float 8s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

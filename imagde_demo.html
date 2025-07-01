@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevSolutions - 专业开发服务</title>
+    <style>
+        /* 全局样式 */
+        :root {
+            --primary-color: #1A365D;
+            --secondary-color: #4299E1;
+            --accent-color: #ED8936;
+            --light-bg: #F7FAFC;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 图片占位符样式 */
+        .dynamic-placeholder {
+            background: linear-gradient(45deg, #f5f7fa 0%, #e4edf5 100%);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dynamic-placeholder::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                    to right,
+                    rgba(255,255,255,0) 0%,
+                    rgba(255,255,255,0.8) 50%,
+                    rgba(255,255,255,0) 100%
+            );
+            transform: rotate(30deg);
+            animation: shimmer 2s infinite linear;
+        }
+
+        @keyframes shimmer {
+            0% { transform: rotate(30deg) translateX(-100%); }
+            100% { transform: rotate(30deg) translateX(100%); }
+        }
+
+        .placeholder-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+            color: var(--primary-color);
+        }
+
+        .placeholder-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .placeholder-text {
+            font-weight: 500;
+        }
+
+        /* 技术栈区域 */
+        .tech-stack {
+            padding: 4rem 0;
+            background-color: var(--light-bg);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .tech-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .tech-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .tech-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+
+        /* 项目展示 */
+        .projects {
+            padding: 4rem 0;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+
+        .project-image {
+            height: 200px;
+            position: relative;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .tech-grid {
+                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 技术栈展示 -->
+    <section class="tech-stack">
+        <h2 style="text-align: center; color: var(--primary-color);">核心技术栈</h2>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <div class="dynamic-placeholder" style="width: 60px; height: 60px; margin: 0 auto 1rem;">
+                    <div class="placeholder-icon">J</div>
+                </div>
+                <span>Java</span>
+            </div>
+
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring">
+                <span>Spring</span>
+            </div>
+
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue">
+                <span>Vue.js</span>
+            </div>
+
+            <div class="tech-item">
+                <div class="dynamic-placeholder" style="width: 60px; height: 60px; margin: 0 auto 1rem;">
+                    <div class="placeholder-icon">C++</div>
+                </div>
+                <span>C++</span>
+            </div>
+
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                <span>MySQL</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section class="projects">
+        <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">精选项目</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div class="project-card">
+                <div class="project-image dynamic-placeholder">
+                    <div class="placeholder-content">
+                        <div class="placeholder-icon">🏭</div>
+                        <div class="placeholder-text">ERP系统截图</div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>制造业ERP系统</h3>
+                    <p>Spring Boot + Vue + MySQL</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image" style="background: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80') center/cover;">
+                </div>
+                <div class="project-info">
+                    <h3>电商CRM系统</h3>
+                    <p>Spring Cloud + Vue3 + Redis</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image dynamic-placeholder">
+                    <div class="placeholder-content">
+                        <div class="placeholder-icon">🎓</div>
+                        <div class="placeholder-text">校园管理系统</div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>校园管理系统</h3>
+                    <p>SSM框架 + jQuery + Bootstrap</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 图片资源提示 -->
+    <section style="margin: 4rem 0; padding: 2rem; background: var(--light-bg); border-radius: 8px;">
+        <h3 style="color: var(--primary-color); margin-top: 0;">图片资源获取提示</h3>
+        <p>以上动态占位符在实际网站中应替换为：</p>
+        <ul>
+            <li>使用 <a href="https://unsplash.com" target="_blank">Unsplash</a> 获取高质量免费图片</li>
+            <li>使用 <a href="https://devicon.dev" target="_blank">Devicon</a> 获取技术图标</li>
+            <li>使用 <a href="https://placeholder.com" target="_blank">Placeholder.com</a> 获取临时占位图</li>
+            <li>使用 <a href="https://dicebear.com" target="_blank">DiceBear</a> 生成头像</li>
+        </ul>
+    </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DevSolutions的项目案例展示，包括企业系统和学术项目">
+    <title>项目案例 | DevSolutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<div id="navbar"></div>
+
+<section class="portfolio-hero">
+    <div class="container">
+        <h1>项目案例</h1>
+        <p>展示我们的专业开发成果和客户成功案例</p>
+    </div>
+</section>
+
+<section class="portfolio-section">
+    <div class="container">
+        <div class="portfolio-filters">
+            <button class="filter-button active" data-filter="all">全部项目</button>
+            <button class="filter-button" data-filter="enterprise">企业系统</button>
+            <button class="filter-button" data-filter="academic">学术项目</button>
+            <button class="filter-button" data-filter="opensource">开源项目</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <!-- 项目1 - ERP系统 -->
+            <div class="portfolio-item enterprise" id="project1">
+                <div class="portfolio-image">
+                    <img src="images/demo_bg.jpg" alt="制造业ERP系统" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <a href="images/demo_bg.jpg" class="portfolio-zoom" data-lightbox="project1">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>制造业ERP系统</h3>
+                    <div class="portfolio-meta">
+                        <span><i class="fas fa-tag"></i> 企业系统</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2023年3月</span>
+                    </div>
+                    <p>为某中型制造企业定制开发的ERP系统，整合了生产、采购、销售、库存和财务模块。</p>
+                    <div class="portfolio-tech">
+                        <span>Spring Boot</span>
+                        <span>Vue.js</span>
+                        <span>MySQL</span>
+                        <span>Redis</span>
+                    </div>
+                    <a href="#project1-details" class="primary-button small view-details">查看详情</a>
+                </div>
+
+                <!-- 项目详情模态框 -->
+                <div id="project1-details" class="portfolio-modal">
+                    <div class="modal-content">
+                        <span class="modal-close">&times;</span>
+                        <h2>制造业ERP系统</h2>
+                        <div class="modal-meta">
+                            <span><i class="fas fa-user"></i> 客户: 某制造企业</span>
+                            <span><i class="fas fa-calendar-alt"></i> 时间: 2023年3月</span>
+                            <span><i class="fas fa-tags"></i> 标签: ERP, 制造, 管理系统</span>
+                        </div>
+
+                        <div class="modal-gallery">
+                            <div class="gallery-main">
+                                <img src="images/demo_bg.jpg" alt="ERP系统截图" loading="lazy">
+                            </div>
+                            <div class="gallery-thumbs">
+                                <img src="images/demo_bg.jpg" alt="ERP系统截图1" loading="lazy">
+                                <img src="images/demo_bg.jpg" alt="ERP系统截图2" loading="lazy">
+                                <img src="images/demo_bg.jpg" alt="ERP系统截图3" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="modal-details">
+                            <div class="detail-section">
+                                <h3><i class="fas fa-tasks"></i> 项目概述</h3>
+                                <p>该项目是为一家中型制造企业开发的ERP系统，旨在整合企业各部门业务流程，提高运营效率。系统包括生产计划、物料需求计划、采购管理、销售管理、库存管理和财务管理六大核心模块。</p>
+                            </div>
+
+                            <div class="detail-section">
+                                <h3><i class="fas fa-cogs"></i> 技术栈</h3>
+                                <ul class="tech-stack">
+                                    <li><strong>后端:</strong> Spring Boot 2.7, Spring Security, MyBatis-Plus</li>
+                                    <li><strong>前端:</strong> Vue 3, Element Plus, ECharts</li>
+                                    <li><strong>数据库:</strong> MySQL 8.0, Redis 6</li>
+                                    <li><strong>部署:</strong> Docker, Nginx, Jenkins</li>
+                                </ul>
+                            </div>
+
+                            <div class="detail-section">
+                                <h3><i class="fas fa-lightbulb"></i> 项目亮点</h3>
+                                <ul class="project-features">
+                                    <li>实现了MRP(物料需求计划)算法，自动计算原材料需求</li>
+                                    <li>开发了可视化生产排程看板，直观展示生产进度</li>
+                                    <li>集成了条码扫描功能，提高库存盘点效率</li>
+                                    <li>实现了多维度数据分析报表，支持决策制定</li>
+                                </ul>
+                            </div>
+
+                            <div class="detail-section">
+                                <h3><i class="fas fa-chart-line"></i> 项目成果</h3>
+                                <div class="project-results">
+                                    <div class="result-item">
+                                        <div class="result-value">30%</div>
+                                        <div class="result-label">生产效率提升</div>
+                                    </div>
+                                    <div class="result-item">
+                                        <div class="result-value">25%</div>
+                                        <div class="result-label">库存成本降低</div>
+                                    </div>
+                                    <div class="result-item">
+                                        <div class="result-value">40%</div>
+                                        <div class="result-label">订单处理速度提升</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 项目2 - CRM系统 -->
+            <div class="portfolio-item enterprise" id="project2">
+                <div class="portfolio-image">
+                    <img src="images/demo_bg.jpg" alt="电商CRM系统" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <a href="images/demo_bg.jpg" class="portfolio-zoom" data-lightbox="project2">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>电商CRM系统</h3>
+                    <div class="portfolio-meta">
+                        <span><i class="fas fa-tag"></i> 企业系统</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2023年1月</span>
+                    </div>
+                    <p>为电商企业开发的客户关系管理系统，整合了客户数据、销售漏斗和营销自动化功能。</p>
+                    <div class="portfolio-tech">
+                        <span>Spring Cloud</span>
+                        <span>Vue3</span>
+                        <span>MongoDB</span>
+                        <span>RabbitMQ</span>
+                    </div>
+                    <a href="#project2-details" class="primary-button small view-details">查看详情</a>
+                </div>
+
+                <!-- 项目详情模态框 -->
+                <div id="project2-details" class="portfolio-modal">
+                    <div class="modal-content">
+                        <span class="modal-close">&times;</span>
+                        <h2>电商CRM系统</h2>
+                        <div class="modal-meta">
+                            <span><i class="fas fa-user"></i> 客户: 某电商平台</span>
+                            <span><i class="fas fa-calendar-alt"></i> 时间: 2023年1月</span>
+                            <span><i class="fas fa-tags"></i> 标签: CRM, 电商, 微服务</span>
+                        </div>
+
+                        <div class="modal-details">
+                            <div class="detail-section">
+                                <h3><i class="fas fa-tasks"></i> 项目概述</h3>
+                                <p>该项目是为一家快速发展的电商平台开发的CRM系统，采用微服务架构设计，包含客户管理、销售管理、营销自动化和数据分析四大模块，帮助客户提升客户满意度和复购率。</p>
+                            </div>
+
+                            <div class="detail-section">
+                                <h3><i class="fas fa-cogs"></i> 技术栈</h3>
+                                <ul class="tech-stack">
+                                    <li><strong>后端:</strong> Spring Cloud Alibaba, Nacos, Sentinel</li>
+                                    <li><strong>前端:</strong> Vue 3, TypeScript, Vite</li>
+                                    <li><strong>数据库:</strong> MongoDB, Redis, Elasticsearch</li>
+                                    <li><strong>消息队列:</strong> RabbitMQ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 项目3 - 毕业设计 -->
+            <div class="portfolio-item academic" id="project3">
+                <div class="portfolio-image">
+                    <img src="images/demo_bg.jpg" alt="校园管理系统" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <a href="images/demo_bg.jpg" class="portfolio-zoom" data-lightbox="project3">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>校园管理系统</h3>
+                    <div class="portfolio-meta">
+                        <span><i class="fas fa-tag"></i> 学术项目</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2022年6月</span>
+                    </div>
+                    <p>大学生毕业设计项目，实现了校园信息管理的核心功能模块。</p>
+                    <div class="portfolio-tech">
+                        <span>SSM</span>
+                        <span>Bootstrap</span>
+                        <span>MySQL</span>
+                    </div>
+                    <a href="#project3-details" class="primary-button small view-details">查看详情</a>
+                </div>
+
+                <!-- 项目详情模态框 -->
+                <div id="project3-details" class="portfolio-modal">
+                    <div class="modal-content">
+                        <span class="modal-close">&times;</span>
+                        <h2>校园管理系统</h2>
+                        <div class="modal-meta">
+                            <span><i class="fas fa-user"></i> 客户: 某大学生毕业设计</span>
+                            <span><i class="fas fa-calendar-alt"></i> 时间: 2022年6月</span>
+                            <span><i class="fas fa-tags"></i> 标签: 毕业设计, 校园管理, SSM</span>
+                        </div>
+
+                        <div class="modal-details">
+                            <div class="detail-section">
+                                <h3><i class="fas fa-tasks"></i> 项目概述</h3>
+                                <p>该项目是为计算机专业大学生开发的毕业设计项目，实现了校园管理系统的基本功能，包括学生管理、教师管理、课程管理和成绩管理等功能模块。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 更多项目... -->
+        </div>
+    </div>
+</section>
+
+<div id="footer"></div>
+
+<script src="js/main.js"></script>
+<script src="js/portfolio.js"></script>
+</body>
+</html>
